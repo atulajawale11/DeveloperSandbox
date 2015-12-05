@@ -1,0 +1,19 @@
+{
+    "username": "atulajawale11@gmail.com", 
+    "environment": "developer", 
+    "project_name": "devOrg", 
+    "workspace": "C:\\Atul\\Work\\WrkSpace", 
+    "org_url": "", 
+    "namespace": "chin2010", 
+    "id": "PNVWRS70CBC83J1VRSJ5I40JJGDLA07F", 
+    "metadata_container": "1dc24000000BAguAAG", 
+    "subscription": [
+        "ApexClass", 
+        "ApexComponent", 
+        "ApexPage", 
+        "ApexTrigger", 
+        "StaticResource", 
+        "CustomObject", 
+        "Profile"
+    ]
+}

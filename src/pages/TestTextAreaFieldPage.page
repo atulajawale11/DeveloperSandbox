@@ -1,0 +1,27 @@
+<apex:page showHeader="true" sidebar="true" standardController="Contact" extensions="TestTextAreaController">
+ <apex:form >
+ <apex:includescript value="{!URLFOR($Resource.CKEditor, 'ckeditor/ckeditor.js')}" />
+	<apex:sectionHeader title="MyHeaderTitle" subtitle="MyHeaderSubTitle" />
+	<apex:pageBlock title="MyPageBlockTitle">
+		<apex:pageBlockButtons >
+			<apex:commandButton value="Refresh" action="{!refreshPage}" rerender="richTextId" oncomplete="ReloadCKEditor();"/>
+			<apex:commandButton value="Save" action="{!save}"  oncomplete="ReloadCKEditor();"/>
+		</apex:pageBlockButtons>
+		<apex:pageBlockSection title="MyPageBlockSectionTitle" id="richTextId">
+			<apex:inputTextarea value="{!con.description}" richText="false" styleClass="ckeditor"/>
+			<apex:inputField value="{!con.firstname}" >
+			
+			</apex:inputField>
+		</apex:pageBlockSection>
+	</apex:pageBlock>
+	<script>
+ function ReloadCKEditor() {
+   for(name in CKEDITOR.instances)
+   {
+       delete CKEDITOR.instances[name];
+   }
+   CKEDITOR.replaceAll();
+}
+	</script>
+ </apex:form>	
+</apex:page>

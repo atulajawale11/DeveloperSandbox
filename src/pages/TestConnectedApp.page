@@ -1,0 +1,6 @@
+<apex:page >
+ 
+ 		<apex:canvasApp applicationName="Hello_World" id="helloWorldId"/>
+ 		var target = {canvas : "helloWorldId"};
+		Sfdc.canvas.controller.resize( {height : "1000px", width : "900px"}, target);
+</apex:page>
