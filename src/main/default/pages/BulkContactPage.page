@@ -1,0 +1,13 @@
+<apex:page standardController="Contact" recordSetVar="contacts" extensions="BulkContactController">
+ <apex:pageBlock title="Viewing Contacts">
+
+  <apex:form id="theForm">
+    <apex:pageBlockSection >
+      
+      <apex:inputField value="{!contacts[0].description}" />
+
+      
+    </apex:pageBlockSection>
+  </apex:form> 
+ </apex:pageBlock>
+</apex:page>
